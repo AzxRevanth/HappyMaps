@@ -4,7 +4,7 @@
 
 ---
 
-##📦 What It Does
+## 📦 What It Does
 - Data Collection
     -Scrapes and aggregates georeferenced data from Twitter and news outlets.
     -Stores raw data into structured CSV files.
@@ -19,6 +19,6 @@
 
 ---
 
-##Tech Stack
+## Tech Stack
 -Python (data processing, NLP)
 -Google Maps API (visualization)
