@@ -20,5 +20,5 @@
 ---
 
 ## Tech Stack
--Python (data processing, NLP)
--Google Maps API (visualization)
+- Python (data processing, NLP)
+- Google Maps API (visualization)
