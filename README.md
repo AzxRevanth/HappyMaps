@@ -6,16 +6,16 @@
 
 ## 📦 What It Does
 - Data Collection
-    -Scrapes and aggregates georeferenced data from Twitter and news outlets.
-    -Stores raw data into structured CSV files.
+    - Scrapes and aggregates georeferenced data from Twitter and news outlets.
+    - Stores raw data into structured CSV files.
 
--Natural Language Processing
-    -Uses an NLP toolkit to analyze sentiment and emotional tone of the collected text.
-    -Assigns a simplified emotion rating (e.g., happy, sad, angry, neutral) to each location.
+- Natural Language Processing
+    - Uses an NLP toolkit to analyze sentiment and emotional tone of the collected text.
+    - Assigns a simplified emotion rating (e.g., happy, sad, angry, neutral) to each location.
 
--Visualization
-    -Plots geolocated data points on Google Maps.
-    -Uses emojis to represent the dominant emotion in each area for an intuitive and engaging display.
+- Visualization
+    - Plots geolocated data points on Google Maps.
+    - Uses emojis to represent the dominant emotion in each area for an intuitive and engaging display.
 
 ---
 
