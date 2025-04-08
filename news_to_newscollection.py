@@ -2,7 +2,7 @@ import csv
 import pymongo
 import os
 # Replace this with your actual connection string
-client = pymongo.MongoClient("mongodb+srv://piyushrathi105:19QXv6uNNlARGBiy@cluster0.grxmynq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+client = pymongo.MongoClient("Your connection string here for MongoDB connection")
 
 # Connect to the database and collection
 db = client["HappyMaps"]
