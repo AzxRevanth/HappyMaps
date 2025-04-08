@@ -1,6 +1,7 @@
 import requests
 import csv
 from datetime import datetime, timedelta
+import os
 
 API_KEY = ""#Enter google news api key
 CITY = input("City name: ").strip()
@@ -38,7 +39,8 @@ for page in range(1, PAGES + 1):
         articles_data.append([title, description, date])
 
 # Save to CSV
-newsdat = "Bengaluru_news.csv"
+folder = os.path.dirname(os.path.abspath(__file__))  # This script's folder
+newsdat = os.path.join(folder,"Bengaluru_news.csv")  #or whatever file name you want
 with open(newsdat, "w", newline='', encoding="utf-8") as f:
     writer = csv.writer(f)
     writer.writerow(["Title", "Description", "Published At"])
