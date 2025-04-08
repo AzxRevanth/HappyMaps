@@ -5,8 +5,8 @@ import math
 
 # Replace with your credentials
 reddit = praw.Reddit(
-    client_id="wW98Cz7x7Rvly3zaScWDvQ",
-    client_secret="ChLWjBnbmNZHZCfb5bnU03LvvoCHog",
+    client_id="",#add your id
+    client_secret="",#add your key
     user_agent="happiness-mapper/0.1"
 )
 
