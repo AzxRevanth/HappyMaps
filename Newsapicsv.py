@@ -2,7 +2,7 @@ import requests
 import csv
 from datetime import datetime, timedelta
 
-API_KEY = "db95476cd3cb4943b989aa069f3c886f"
+API_KEY = ""#Enter google news api key
 CITY = input("City name: ").strip()
 
 # Date range
@@ -38,7 +38,7 @@ for page in range(1, PAGES + 1):
         articles_data.append([title, description, date])
 
 # Save to CSV
-newsdat = f"{CITY}_news.csv"
+newsdat = "Bengaluru_news.csv"
 with open(newsdat, "w", newline='', encoding="utf-8") as f:
     writer = csv.writer(f)
     writer.writerow(["Title", "Description", "Published At"])
