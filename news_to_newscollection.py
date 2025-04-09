@@ -1,3 +1,5 @@
+#there is no need for this file rn as news is directly being sent to news collection instead of a csv first
+
 import csv
 import pymongo
 import os
