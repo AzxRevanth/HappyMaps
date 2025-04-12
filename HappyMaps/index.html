@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Happy Maps</title>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div id="floating-panel">
+      <button id="toggle-heatmap">Toggle Heatmap</button>
+      <button id="change-gradient">Change gradient</button>
+      <button id="change-radius">Change radius</button>
+      <button id="change-opacity">Change opacity</button>
+    </div>
+    <div id="map"></div>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=visualization&v=weekly"
+      defer
+    ></script>
+  </body>
+</html>
