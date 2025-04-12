@@ -11,6 +11,11 @@ from datetime import datetime, timedelta
 from langdetect import detect
 from geopy.geocoders import Nominatim
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+import pymongo
+
+client=pymongo.MongoClient("mongodb+srv://piyushrathi105:19QXv6uNNlARGBiy@cluster0.grxmynq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+db=client["HappyMaps"]
+collection=db["emotion"]
 
 nltk.download('punkt')
 nltk.download('vader_lexicon')
@@ -230,10 +235,10 @@ def process_location(location):
 # ----------------------------------------
 
 # Initialize master CSV
-if not os.path.exists(MASTER_CSV):
+'''if not os.path.exists(MASTER_CSV):
     with open(MASTER_CSV, "w", newline='', encoding="utf-8") as f:
         writer = csv.writer(f)
-        writer.writerow(["Location", "Latitude", "Longitude", "Total_Score"])
+        writer.writerow(["Location", "Latitude", "Longitude", "Total_Score"])'''
 
 # Process all locations
 for i, location in enumerate(locations, 1):
@@ -241,14 +246,21 @@ for i, location in enumerate(locations, 1):
     try:
         result = process_location(location)
         if result:
-            with open(MASTER_CSV, "a", newline='', encoding="utf-8") as f:
+            e={"place":result["Location"],
+               "latitude":result["Latitude"],
+               "longitude":result["Longitude"],
+               "score":result["Total_Score"]
+               }
+            
+            collection.insert_one(e)
+            '''with open(MASTER_CSV, "a", newline='', encoding="utf-8") as f:
                 writer = csv.writer(f)
                 writer.writerow([
                     result["Location"],
                     result["Latitude"],
                     result["Longitude"],
                     result["Total_Score"]
-                ])
+                ])'''
     except Exception as e:
         print(f"❌ Error processing {location}: {e}")
         continue
