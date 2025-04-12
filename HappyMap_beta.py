@@ -25,7 +25,7 @@ CLICKBAIT_WORDS = ["shocking", "you won't believe", "don't", "secret", "revealed
 # ----------------------------------------
 # CONFIG
 # ----------------------------------------
-NEWS_API_KEY = "3503f6afcd6f435d996e561157a3134b"
+NEWS_API_KEY = "3503f6afcd6f435d996e561157a3134b"#List of API here
 REDDIT_CLIENT_ID = "wW98Cz7x7Rvly3zaScWDvQ"
 REDDIT_CLIENT_SECRET = "ChLWjBnbmNZHZCfb5bnU03LvvoCHog"
 REDDIT_USER_AGENT = "happiness-mapper/0.2"
@@ -71,7 +71,7 @@ NEGATIVE_OVERRIDE = [
 # ----------------------------------------
 # Functions
 # ----------------------------------------
-def fetch_reddit_posts(subreddit_name):
+def fetch_reddit_posts(subreddit_name):#function to be modified to access list of apis
     time_cutoff = datetime.utcnow().timestamp() - (DAYS * 86400)
     subreddit = reddit.subreddit(subreddit_name)
     results = []
