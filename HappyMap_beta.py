@@ -209,7 +209,7 @@ def process_location(location):
     
     reddit_score = compute_happiness_score(reddit_scores, POST_LIMIT)
     news_score = compute_happiness_score(news_scores, PAGES * PAGE_SIZE)
-    total_score = news_score*0.75 + 0.25*reddit_score
+    total_score = news_score*0.78 + 0.22*reddit_score
     
     print(f"🎯 Scores for {location}:")
     print(f"Reddit Score: {reddit_score} / 10")
@@ -233,7 +233,7 @@ def process_location(location):
 if not os.path.exists(MASTER_CSV):
     with open(MASTER_CSV, "w", newline='', encoding="utf-8") as f:
         writer = csv.writer(f)
-        writer.writerow(["Location", "Latitude", "Longitude", "Reddit_Score", "News_Score", "Total_Score"])
+        writer.writerow(["Location", "Latitude", "Longitude", "Total_Score"])
 
 # Process all locations
 for i, location in enumerate(locations, 1):
@@ -247,8 +247,6 @@ for i, location in enumerate(locations, 1):
                     result["Location"],
                     result["Latitude"],
                     result["Longitude"],
-                    result["Reddit_Score"],
-                    result["News_Score"],
                     result["Total_Score"]
                 ])
     except Exception as e:
