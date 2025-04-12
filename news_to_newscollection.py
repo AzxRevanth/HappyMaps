@@ -1,21 +1,21 @@
+#there is no need for this file rn as news is directly being sent to news collection instead of a csv first
+
 import csv
 import pymongo
 import os
+# Replace this with your actual connection string
+client = pymongo.MongoClient("Your connection string here for MongoDB connection")
 
-client=pymongo.MongoClient("your connection string here from mongoDB")
+# Connect to the database and collection
 db = client["HappyMaps"]
-collection = db["tweets"]  # You can change this to whatever you want
+collection = db["news"]  # You can change this to whatever you want
 
 # Read CSV and insert into MongoDB
-csv_path = os.path.join(os.path.dirname(__file__), "data.csv") #filename as per convinience
+csv_path = os.path.join(os.path.dirname(__file__), "Bengaluru_news.csv")
 with open(csv_path, newline='', encoding='utf-8') as csvfile:
     reader = csv.DictReader(csvfile)
     data = list(reader)
     
-    '''for i, row in enumerate(reader, start=1):
-        row["index"] = i  # Add custom index starting from 1
-        data.append(row)'''
-
     if data:
         collection.delete_many({})  # This clears all existing data in the collection
         collection.insert_many(data)

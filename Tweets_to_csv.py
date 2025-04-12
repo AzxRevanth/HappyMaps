@@ -9,7 +9,7 @@ from geopy.geocoders import Nominatim
 from tweepy.errors import TooManyRequests
 
 # Your Bearer Token
-BEARER_TOKEN = "Replace the Token here"  # Replace with yours
+BEARER_TOKEN = "AAAAAAAAAAAAAAAAAAAAAGad0QEAAAAA0a1TyXSeyxpUbG14hYoqmEAxI3Q%3DpAs5LwE1tlOWsWGTaQXnFcdjmebQV09ogVkiqeEWgIVcXEwBK9"  # Replace with yours
 
 # Initialize Tweepy client
 client = tweepy.Client(bearer_token=BEARER_TOKEN)
