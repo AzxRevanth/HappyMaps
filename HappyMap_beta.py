@@ -38,7 +38,7 @@ POST_LIMIT = 100
 DAYS = 1
 PAGES = 5
 PAGE_SIZE = 20
-MASTER_CSV = "city_happiness_master.csv"
+MASTER_CSV = "database"
 # ----------------------------------------
 
 # List of 100 major Indian cities
