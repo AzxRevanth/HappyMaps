@@ -2,7 +2,7 @@ import os
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 from dotenv import load_dotenv
 from pathlib import Path
-env_path = Path(__file__).parent / 'keys.env'
+env_path = Path(__file__).parent / '.env'
 import praw
 import requests
 import csv
