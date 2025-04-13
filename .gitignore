@@ -7,4 +7,4 @@ node_modules/
 build/
 
 # Ignore environment variables file
-#.env
+.env
